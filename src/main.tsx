@@ -1,12 +1,12 @@
+import "./index.css";
+
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-
-import { RouterProvider } from "@/router";
-import { createBrowserRouter } from "@/router/api";
-
 import { Home, Post } from "@/pages";
-
-import "./index.css";
+import { RouterProvider } from "./router/react/components";
+import { createBrowserRouter } from "./router/react/utils";
+import { PostList } from "./pages/PostList";
+import { PostCreate } from "./pages/PostCreate";
 
 const router = createBrowserRouter([
   {
@@ -14,7 +14,15 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "/post/:id",
+    path: "/posts",
+    element: <PostList />,
+  },
+  {
+    path: "/posts/create",
+    element: <PostCreate />,
+  },
+  {
+    path: "/posts/:id",
     element: <Post />,
   },
 ]);

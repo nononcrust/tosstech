@@ -1,7 +1,10 @@
 import { Template } from "@/components/layout/Template";
 import { PostList } from "@/components/post";
+import { useNavigate } from "@/router/react/hooks";
 
 export function Home() {
+  const navigate = useNavigate();
+
   return (
     <Template>
       <div className="w-full mt-6 mb-10 mx-auto flex flex-col items-center">
@@ -12,6 +15,7 @@ export function Home() {
         />
       </div>
       <PostList />
+      <button onClick={() => navigate("posts")}>게시글 목록</button>
     </Template>
   );
 }
