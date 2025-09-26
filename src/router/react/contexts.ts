@@ -4,7 +4,6 @@ import type { BrowserRouter, RouteMatch } from "./types";
 
 type RouterContextValue = {
   router: BrowserRouter;
-  match: RouteMatch | null;
 };
 
 export const [RouterContext, useRouterContext] =
@@ -16,3 +15,10 @@ type RouterStateContextValue = {
 
 export const [RouterStateContext, useRouterStateContext] =
   createContextFactory<RouterStateContextValue>("RouterState");
+
+type RouteContextValue = {
+  match: RouteMatch | null;
+};
+
+export const [RouteContext, useRouteContext] =
+  createContextFactory<RouteContextValue>("Route");

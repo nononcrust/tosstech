@@ -6,6 +6,7 @@ import { Home, Post } from "@/pages";
 import { RouterProvider } from "./router/react/components";
 import { createBrowserRouter } from "./router/react/utils";
 import { PostList } from "./pages/PostList";
+import { PostCreate } from "./pages/PostCreate";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "/posts",
     element: <PostList />,
+  },
+  {
+    path: "/posts/create",
+    element: <PostCreate />,
   },
   {
     path: "/posts/:id",

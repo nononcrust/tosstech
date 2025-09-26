@@ -1,4 +1,8 @@
-import { useRouterContext, useRouterStateContext } from "./contexts";
+import {
+  useRouteContext,
+  useRouterContext,
+  useRouterStateContext,
+} from "./contexts";
 
 export const useNavigate = () => {
   const { router } = useRouterContext();
@@ -13,7 +17,7 @@ export const useLocation = () => {
 };
 
 export const useParams = () => {
-  const { match } = useRouterContext();
+  const { match } = useRouteContext();
 
   return match ? match.params : {};
 };
