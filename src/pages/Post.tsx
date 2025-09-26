@@ -1,10 +1,10 @@
 import { Template } from "@/components/layout/Template";
 import { getPostById, type PostDetail } from "@/entities/post";
-import { useParams } from "@/router/hooks";
+import { useParams } from "@/router/react/hooks";
 import { useEffect, useState } from "react";
 
 export function Post() {
-  const { id } = useParams();
+  const { id } = useParams() as { id: string };
   const [data, setData] = useState<PostDetail | null>(null);
 
   useEffect(() => {

@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 
-import { useNavigate } from "@/router/hooks";
-
 import { getPostList, type Post } from "@/entities/post";
+import { useNavigate } from "@/router/react/hooks";
 
 export function PostList() {
   const navigate = useNavigate();
